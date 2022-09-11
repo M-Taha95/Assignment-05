@@ -58,7 +58,8 @@ class _HomePageState extends State<HomePage> {
       home: Scaffold(
           appBar: AppBar(),
           body: Container(
-            child: ListView.builder(
+            child: ListView.builder( shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
               itemCount: 8,
               itemBuilder: (BuildContext context, int i) {
                 return Container(
