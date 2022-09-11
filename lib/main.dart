@@ -57,8 +57,8 @@ class _HomePageState extends State<HomePage> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(),
-          body: Container(
-            child: ListView.builder( shrinkWrap: true,
+          body: listView(
+            children:[ ListView.builder( shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
               itemCount: 8,
               itemBuilder: (BuildContext context, int i) {
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
-          )),
+         ]),
     );
   }
 }
